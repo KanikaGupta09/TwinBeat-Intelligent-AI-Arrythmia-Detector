@@ -1,7 +1,5 @@
 # 🫀 TwinBeat
-<img src="https://raw.githubusercontent.com/USERNAME/REPO/BRANCH/assets/demo.gif" width="900" height="220" />
-![Demo](https://raw.githubusercontent.com/USERNAME/REPO/BRANCH/assets/demo.gif)
-
+<img width="900" height="220" alt="image" src="https://github.com/user-attachments/assets/c09f1ce4-9c24-4374-9137-d03fa238c75b" />
 
 
 ### AI-Powered Arrhythmia Detection & Digital Twin Simulator (ML-based)
