@@ -1,5 +1,7 @@
 # 🫀 TwinBeat
 <img width="900" height="220" alt="image" src="https://github.com/user-attachments/assets/c09f1ce4-9c24-4374-9137-d03fa238c75b" />
+<img width="624" height="336" alt="image" src="https://github.com/user-attachments/assets/ccd2c09f-4371-4cc5-aa3b-e207c2583617.gif" />
+
 
 ### AI-Powered Arrhythmia Detection & Digital Twin Simulator (ML-based)
 
