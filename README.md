@@ -25,11 +25,11 @@ This project aims to **assist clinicians** by using machine learning to:
 ---
 
 
-🔁 Project Flow & Machine Learning Lifecycle
+## 🔁 Project Flow & Machine Learning Lifecycle
 
 This project follows a structured end-to-end machine learning pipeline, starting from raw ECG data and ending with a validated arrhythmia prediction model.
 
-1️⃣ Data Acquisition
+### 1️⃣ Data Acquisition
 
 Use clinically validated ECG datasets (PTB-XL primarily).
 
@@ -41,7 +41,7 @@ scp_statements.csv for diagnosis mapping
 
 Raw ECG signals from .dat + .hea files using WFDB
 
-2️⃣ Data Understanding & Exploration
+### 2️⃣ Data Understanding & Exploration
 
 Understand ECG structure (12-lead, sampling rate, duration).
 
@@ -51,7 +51,7 @@ Identify rhythm-based arrhythmia labels (AFIB, PVC, PAC, etc.).
 
 Check signal quality, noise flags, and demographic coverage.
 
-3️⃣ Data Cleaning & Preparation
+### 3️⃣ Data Cleaning & Preparation
 
 Convert diagnostic labels from encoded format to usable targets.
 
@@ -61,7 +61,7 @@ Handle noisy or low-quality signals where required.
 
 Normalize ECG signal amplitudes for consistency.
 
-4️⃣ Signal Processing
+### 4️⃣ Signal Processing
 
 Read raw ECG waveforms using .dat + .hea files.
 
@@ -73,7 +73,7 @@ Optional band-pass filtering
 
 Segment ECG into meaningful windows if required.
 
-5️⃣ Feature Engineering (Core ML Step)
+### 5️⃣ Feature Engineering (Core ML Step)
 
 Since classical ML models cannot directly learn from raw waveforms:
 
@@ -103,7 +103,7 @@ Columns = engineered features
 
 Target = arrhythmia label
 
-6️⃣ Dataset Construction
+### 6️⃣ Dataset Construction
 
 Combine features, labels, and metadata into a single ML-ready table.
 
@@ -111,7 +111,7 @@ Perform train–test split with stratification to handle class imbalance.
 
 Ensure no patient-level data leakage across splits.
 
-7️⃣ Model Training
+### 7️⃣ Model Training
 
 Train and compare multiple classical ML models:
 
@@ -127,7 +127,7 @@ Ensemble Voting Classifier
 
 Hyperparameters are tuned to optimize performance.
 
-8️⃣ Model Evaluation
+### 8️⃣ Model Evaluation
 
 Evaluate models using:
 
@@ -143,7 +143,7 @@ Confusion Matrix
 
 Focus is placed on recall and sensitivity, which are critical for medical risk detection.
 
-9️⃣ Interpretation & Explainability
+### 9️⃣ Interpretation & Explainability
 
 Analyze feature importance (especially for tree-based models).
 
@@ -151,7 +151,7 @@ Understand which ECG features contribute most to arrhythmia detection.
 
 Ensure predictions are explainable for clinical relevance.
 
-🔟 Deployment Readiness
+### 🔟 Deployment Readiness
 
 Serialize trained ML models.
 
