@@ -1,4 +1,4 @@
-# 🫀 TwynBeat
+# 🫀 TwinBeat
 
 ### AI-Powered Arrhythmia Detection & Digital Twin Simulator (ML-based)
 
