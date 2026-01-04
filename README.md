@@ -8,6 +8,8 @@ TwinBeat is a **machine-learning–driven healthcare analytics project** that fo
 
 The project uses **classical ML techniques (no deep learning, no NLP)** and is built on **clinically validated ECG datasets**.
 
+### Here's my Published Research paper in Journal of Applied Bio Analysis : https://journalofappliedbioanalysis.com/comparative-analysis-of-machine-learning-techniques-for-arrhythmia-detection
+
 ---
 
 ## 📌 Problem Statement
