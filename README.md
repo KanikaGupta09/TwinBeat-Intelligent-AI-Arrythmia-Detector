@@ -2,7 +2,7 @@
 
 ### AI-Powered Arrhythmia Detection & Digital Twin Simulator (ML-based)
 
-TwynBeat is a **machine-learning–driven healthcare analytics project** that focuses on **early detection of cardiac arrhythmias using ECG signals**, along with a **digital twin comparison** to improve interpretability for doctors and patients.
+TwinBeat is a **machine-learning–driven healthcare analytics project** that focuses on **early detection of cardiac arrhythmias using ECG signals**, along with a **digital twin comparison** to improve interpretability for doctors and patients.
 
 The project uses **classical ML techniques (no deep learning, no NLP)** and is built on **clinically validated ECG datasets**.
 
