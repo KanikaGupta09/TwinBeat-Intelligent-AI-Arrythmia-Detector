@@ -35,31 +35,23 @@ Use clinically validated ECG datasets (PTB-XL primarily).
 
 Import:
 
-ptbxl_database.csv for metadata and labels
-
-scp_statements.csv for diagnosis mapping
-
-Raw ECG signals from .dat + .hea files using WFDB
+* ptbxl_database.csv for metadata and labels
+* scp_statements.csv for diagnosis mapping
+* Raw ECG signals from .dat + .hea files using WFDB
 
 ### 2️⃣ Data Understanding & Exploration
 
-Understand ECG structure (12-lead, sampling rate, duration).
-
-Study label distribution (normal vs arrhythmia cases).
-
-Identify rhythm-based arrhythmia labels (AFIB, PVC, PAC, etc.).
-
-Check signal quality, noise flags, and demographic coverage.
+* Understand ECG structure (12-lead, sampling rate, duration).
+* Study label distribution (normal vs arrhythmia cases).
+* Identify rhythm-based arrhythmia labels (AFIB, PVC, PAC, etc.).
+* Check signal quality, noise flags, and demographic coverage.
 
 ### 3️⃣ Data Cleaning & Preparation
 
-Convert diagnostic labels from encoded format to usable targets.
-
-Filter ECG records relevant to arrhythmia prediction.
-
-Handle noisy or low-quality signals where required.
-
-Normalize ECG signal amplitudes for consistency.
+* Convert diagnostic labels from encoded format to usable targets.
+* Filter ECG records relevant to arrhythmia prediction.
+* Handle noisy or low-quality signals where required.
+* Normalize ECG signal amplitudes for consistency.
 
 ### 4️⃣ Signal Processing
 
@@ -67,110 +59,73 @@ Read raw ECG waveforms using .dat + .hea files.
 
 Apply:
 
-Baseline drift removal
-
-Optional band-pass filtering
-
-Segment ECG into meaningful windows if required.
+* Baseline drift removal
+* Optional band-pass filtering
+* Segment ECG into meaningful windows if required.
 
 ### 5️⃣ Feature Engineering (Core ML Step)
 
-Since classical ML models cannot directly learn from raw waveforms:
-
-Extract time-domain features:
-
-Heart rate
-
-RR intervals
-
-Signal variance, mean, skewness
-
-Extract morphological features:
-
-QRS duration
-
-Peak amplitudes
-
-Extract frequency-domain features:
-
-FFT or wavelet-based energy features
+* Since classical ML models cannot directly learn from raw waveforms:
+* Extract time-domain features:
+* Heart rate
+* RR intervals
+* Signal variance, mean, skewness
+* Extract morphological features:
+* QRS duration
+* Peak amplitudes
+* Extract frequency-domain features:
+* FFT or wavelet-based energy features
 
 Result: A structured tabular dataset where
 
-Rows = ECG records / segments
-
-Columns = engineered features
-
-Target = arrhythmia label
+* Rows = ECG records / segments
+* Columns = engineered features
+* Target = arrhythmia label
 
 ### 6️⃣ Dataset Construction
 
-Combine features, labels, and metadata into a single ML-ready table.
-
-Perform train–test split with stratification to handle class imbalance.
-
-Ensure no patient-level data leakage across splits.
+* Combine features, labels, and metadata into a single ML-ready table.
+* Perform train–test split with stratification to handle class imbalance.
+* Ensure no patient-level data leakage across splits.
 
 ### 7️⃣ Model Training
 
-Train and compare multiple classical ML models:
-
-Logistic Regression (baseline)
-
-Random Forest
-
-Support Vector Machine (SVM)
-
-Decision Tree
-
-Ensemble Voting Classifier
-
-Hyperparameters are tuned to optimize performance.
+* Train and compare multiple classical ML models:
+* Logistic Regression (baseline)
+* Random Forest
+* Support Vector Machine (SVM)
+* Decision Tree
+* Ensemble Voting Classifier
+* Hyperparameters are tuned to optimize performance.
 
 ### 8️⃣ Model Evaluation
 
 Evaluate models using:
 
-Accuracy
-
-Precision
-
-Recall
-
-F1-score
-
-Confusion Matrix
+* Accuracy
+* Precision
+* Recall
+* F1-score
+* Confusion Matrix
 
 Focus is placed on recall and sensitivity, which are critical for medical risk detection.
 
 ### 9️⃣ Interpretation & Explainability
 
-Analyze feature importance (especially for tree-based models).
-
-Understand which ECG features contribute most to arrhythmia detection.
-
-Ensure predictions are explainable for clinical relevance.
+* Analyze feature importance (especially for tree-based models).
+* Understand which ECG features contribute most to arrhythmia detection.
+* Ensure predictions are explainable for clinical relevance.
 
 ### 🔟 Deployment Readiness
 
-Serialize trained ML models.
-
-Prepare inference pipeline for integration into a web application.
-
-Ensure consistent preprocessing between training and prediction.
-
-This structured lifecycle ensures the project is:
-
-Clinically meaningful
-
-ML-correct
-
-Explainable
-
-Scalable for real-world use
-
-
-
+* Serialize trained ML models.
+* Prepare inference pipeline for integration into a web application.
+* Ensure consistent preprocessing between training and prediction.
+* This structured lifecycle ensures the project is:
+* Clinically meaningful
+* ML-correct
+* Explainable
+* Scalable for real-world use
 
 ## 📊 Dataset Used
 
