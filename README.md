@@ -1,5 +1,6 @@
 # 🫀 TwinBeat
 <img src="https://raw.githubusercontent.com/USERNAME/REPO/BRANCH/assets/demo.gif" width="900" height="220" />
+![Demo](https://raw.githubusercontent.com/USERNAME/REPO/BRANCH/assets/demo.gif)
 
 
 
